@@ -9,8 +9,8 @@ def my_form_view(request):
     if request.method == 'POST':
         form = BookingForms(request.POST)
         if form.is_valid():
-            form.save()
-            return render(request, 'book_now/booking_success/')
+            form.save();
+            return render(request, 'booking/booking_success.html');
     form = BookingForms()
     context = {'form': form}
     return render(request, 'booking/booking.html', context)
