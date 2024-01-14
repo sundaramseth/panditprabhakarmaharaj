@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col" style="height: 13vh;">
+      </div>
+    </div>
+    <!-- Spacer End -->
+  
+    <div class="row">
+      <div class="col headabout">
+        <h2 class="heading2"><b>Shanti Pooja Services</b></h2>
+      </div>
+    </div>
+    <!-- Spacer Start-->
+    <div class="row">
+      <div class="col" style="height: 4vh;">
+      </div>
+    </div>
+    <!-- Spacer End -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container " data-aos="fade-up">
+  
+        <div class="section-title">
+          <h2>Festival Puja</h2>
+  
+        </div>
+  
+        <div class="row">
+          {% for x in sthapan_service %}
+          {% if  x.category  == "Sthapan Puja" %}
+
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card mb-3" style="max-width: 100% !important; width: 100% !important;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="/media/{{ x.puja_img }}"  class="img-fluid" alt="..." style="height: 100% !important;">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title pt-2"><b>{{ x.title }}</b></h5>
+                    <p class="card-text">{{ x.description|slice:":255"  }}</p>
+                    <p  class="card-text"><small class="text-muted"><b>Price</b>: Rs. {{ x.price }}</small></p>
+                    <p>  <a href="details/{{ x.id }}"  type="button" class="btn-orange-outline">Book Now</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          {% endif %} 
+          {% endfor %}
+        </div>
+
+      </div>
+  
+    </section><!-- End Services Section -->
+   <!-- Spacer Start-->
+   <div class="row">
+    <div class="col" style="height: 4vh;">
+    </div>
+  </div>
+  <!-- Spacer End -->
+</div>
+
+
+{% endblock %}

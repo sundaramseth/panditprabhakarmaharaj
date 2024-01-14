@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+  <!-- Spacer Start-->
+  <div class="row">
+    <div class="col" style="height: 13vh;">
+    </div>
+  </div>
+  <!-- Spacer End --><!-- Spacer Start-->
+  <div class="container-fluid " style="padding-top: 40px;padding-bottom: 40px;" >
+  
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <img src="/media/{{ festival_puja_d.puja_img }}"   style="height: 100% !important; width: 100%; border-radius: 24px;">
+        </div>
+      </div>
+      <div class="row pt-4">
+        <div class="col text-center contact-card">
+          <h5 class="pt-3"><b>Book Online Pandit Ji For {{ festival_puja_d.title }}</b></h5>
+           <p>Call Or Whatsapp on:</p> 
+           <p class="text-danger"> +91 96620 01600, +91 70160 73654</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  <div class="col-md-6 col-sm-12 p30">
+  
+    <h2 class="py-2"> <b>{{ festival_puja_d.title }}</b> </h2>
+   
+    <h5 class="py-2"><b>Category</b>: {{festival_puja_d.category}}</h5>
+
+    <p class="py-2">{{ festival_puja_d.description }}</p>
+
+    <p><b>Price (Without Pooja Samagri)</b>: Rs. {{ festival_puja_d.price }}</p>
+
+    <p class="py-2"><b>Price (With Pooja Samagri)</b>: Rs. Price on Request</p>
+    
+    <a href="/book_now" type="button" class="btn-orange">Book Now</a>
+  </div>
+</div>
+
+
+ 
+    
+    
+ 
+
+</div>
+
+
+{% endblock %}

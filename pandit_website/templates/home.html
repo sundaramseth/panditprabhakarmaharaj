@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- ======= Hero Section ======= -->
+<div class="container-fluid">
+  <div class="row">
+    <div class="col" style="height: 126px;">
+
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col p-0">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" style="width: 100%;">
+ 
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static 'img/crosel2.png' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block" style="text-align: left;">
+              <h1 class="font-18px"><b>Pandit Prabhakar Maharaj</b></h1>
+              <h2 class="font-18px">BOOK PANDITJI ONLINE FOR ALL KINDS OF POOJA!!</h2>
+              <p class="d-none-xm fs-5">Pandit Prabhakar Maharaj is highly qualified and experienced Panditjee<br> for all type of Puja, Hawan and Anusthan</p>
+              <p class="pt-3"><a href="{% url 'contact' %}" type="button" class="btn-orange">Contact us</a></p>
+            </div>
+          </div>
+      
+          <div class="carousel-item">
+            <img src="{% static 'img/yagyopaveet.webp' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block" style="text-align: left;">
+              <h1 class="font-18px">Pandit Prabhakar Maharaj</h1>
+              <h2 class="font-18px">BOOK PANDITJI ONLINE FOR ALL KINDS OF POOJA!!</h2>
+              <p class="d-none-xm">Pandit Prabhakar Maharaj is highly qualified and experienced Panditjee<br> for all type of Puja, Hawan and Anusthan</p>
+              <p class="pt-3"><a href="{% url 'contact' %}" type="button" class="btn-orange">Contact us</a></p>
+            </div>
+          </div>
+    
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'img/puja.webp' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-md-block" style="text-align: left;">
+              <h1 class="font-18px">Pandit Prabhakar Maharaj</h1>
+              <h2 class="font-18px">BOOK PANDITJI ONLINE FOR ALL KINDS OF POOJA!!</h2>
+              <p class="d-none-xm">Pandit Prabhakar Maharaj is highly qualified and experienced Panditjee<br> for all type of Puja, Hawan and Anusthan</p>
+              <p class="pt-3"><a href="{% url 'contact' %}" type="button" class="btn-orange">Contact us</a></p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon iconsetting" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon iconsetting" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<main id="main">
+
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <h3>PANDIT BOOKING - BOOK PANDITJI FOR PUJA</h3>
+        <p> Pandit "Prabhakar Maharaj" is for availing for Vedic and Hindu Puja Services like performing Vedic
+          Rituals, Religious Ceremonies,
+          Vastu Yagya and many more.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+          <img src="{% static 'img/panditji-for-puja.webp' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up"
+          data-aos-delay="100">
+          <h3>About My Services</h3>
+          <br>
+          <p class="fst-italic">
+            The householder Saint Golokvasi Pandit Late Shri Ram Nath Awasthi used to give astrological
+             predictions along with priestly rituals for the welfare of the people and through the chanting, 
+             worship and rituals done under his guidance, they used to get the desired results. His chanting and worship rituals never failed.
+              Following in his footsteps, his son "Prabhakar Maharaj" is continuously striving for public welfare.
+           
+            <br><br>
+             Pandit "Prabhakar Maharaj"  perform rituals like Havan, Yagya, Shanti Vidhi, Shubh Vivah – Wedding Ceremony, Satyanarayan
+            Katha, Griha Pravesh,
+            Namkaran Sanskar, Nava Graha Shanti, Engagement, Festival Puja,
+            Janeu, Ganesh Puja, Ram Katha, Mundan Sanskar, Shrimant Puja, Namkaran, Bhagwat Katha, Vastu Shanti, etc.
+          </p>
+
+          <p>
+           <b> Book Pandit Online For Any Puja at Your Place In Just One Call</b> – <br><br><b class="text-danger">+91 96620 01600, +91 70160 73654</b>
+          </p>
+          <p>
+
+            <a href="{% url 'about' %}" type="button" class="btn-orange">Learn More</a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Section -->
+
+
+  <!-- ======= Counts Section ======= -->
+  <section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
+      <div class="row">
+        <div class="col success">
+          <h2> <b>PANDITJEE ACHIEVEMENTS</b></h2>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6">
+          <div class="count-box">
+            <i class="bi bi-emoji-smile">1000+</i>
+            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><b>Satisfied Customers</b> </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+          <div class="count-box">
+            <i class="bi bi-journal-richtext">20+</i>
+            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><b>Type of Puja</b></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-headset">24h</i>
+            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><b>Hours Of Support</b></p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+          <div class="count-box">
+            <i class="bi bi-people">2000+</i>
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><b>Puja Performed</b></p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Counts Section -->
+
+
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container " data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Services</h2>
+        <h3>OUR SERVICES - HOW WE CAN HELP</h3>
+
+      </div>
+      <div class="row">
+      {% for x in all_puja %}
+     
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px; " data-aos="zoom-in" data-aos-delay="100">
+ 
+        <div class="icon-box">
+          <div class="imageservice"><img class="service_icon" src="/media/{{ x.puja_img }}"  > </div>
+          <h4 class="mt-4"> <a href="home/details/{{ x.id }}" >{{ x.title }}</a></h4>
+          <p >{{ x.description|slice:":255"  }}</p>
+        </div>
+       </a>
+      </div>
+
+
+    {% endfor %}
+
+
+      </div>
+
+      <!-- Spacer Start-->
+      <div class="row">
+        <div class="col" style="height: 6vh;">
+        </div>
+      </div>
+      <!-- Spacer End -->
+
+      <!-- button -->
+      <div class="row">
+        <div class="col text-center">
+          <a href="/all_service" type="button"  class="btn-orange-outline">All Pooja Services</a>
+        </div>
+      </div>
+
+
+      <!-- Spacer Start-->
+      <div class="row">
+        <div class="col pcol0"  style="padding: 30px;">
+        </div>
+      </div>
+      <!-- Spacer End -->
+    </div>
+
+  </section><!-- End Services Section -->
+
+
+
+
+
+
+
+
+</main><!-- End #main -->
+
+{% endblock %}

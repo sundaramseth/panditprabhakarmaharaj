@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <!-- Spacer Start-->
+  <div class="container-fluid">
+
+  <div class="row">
+    <div class="col" style="height: 13vh;">
+    </div>
+  </div>
+  <!-- Spacer End -->
+
+  <div class="row">
+    <div class="col headabout">
+      <h2 class="heading2"><b>All Pooja Services</b></h2>
+    </div>
+  </div>
+  <!-- Spacer Start-->
+  <div class="row">
+    <div class="col" style="height: 4vh;">
+    </div>
+  </div>
+  <!-- Spacer End -->
+
+
+  <div class="row">
+    <div class="col">
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container " data-aos="fade-up">
+
+    <div class="row">
+      <div class="col  my-flex">
+        <div class="card" >
+          <img src="{% static 'img/festivalpooja.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4><a href="/festive"><b>Festival Puja</b></a></h4>
+          </div>
+        </div>
+  
+        <div class="card" >
+          <img src="{% static 'img/hwanyagna.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4><a href="/hawan"><b>Hawan Yagna</b></a></h4>
+          </div>
+        </div>
+        <div class="card" >
+          <img src="{% static 'img/purankatha.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4><a href="/katha"><b>Puran Katha</b></a></h4>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col my-flex">
+        <div class="card" >
+          <img src="{% static 'img/shantipooja.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4><a href="/shanti_puja"><b>Shanti Puja</b></a></h4>
+          </div>
+        </div>
+  
+        <div class="card" >
+          <img src="{% static 'img/sanskarvidhi.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4><a href="/sanskar_vidhi"><b>Sanskar Vidhi</b></a></h4>
+          </div>
+        </div>
+        <div class="card" >
+          <img src="{% static 'img/sthapanpuja.png' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h4><a href="/sthapan_puja"><b>Sthapan Puja</b></a></h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+      </div>
+
+      <!-- Spacer Start-->
+      <div class="row">
+        <div class="col" style="height: 6vh;">
+        </div>
+      </div>
+      <!-- Spacer End -->
+
+    </div>
+
+  </section><!-- End Services Section -->
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}

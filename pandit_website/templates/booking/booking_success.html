@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Booking Success{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+            <!-- Spacer Start-->
+            <div class="row">
+                <div class="col" style="height: 15vh;">
+                </div>
+            </div>
+            <!-- Spacer End -->
+    
+
+
+    <div class="row">
+        <div class="col text-center py-5">
+           <h1><b> Thank You!</b></h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col text-center">
+            <img src="{% static 'img/thankyou.webp' %}" alt="" class="src" width="100">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col py-5 text-center">
+            <h1><b>{{booking_details.your_name}} Your booking request for {{booking_details.puja_date}} has been send to our pandit.</b></h1>
+            <h2>
+                Pooja Date - {{booking_details.puja_date}} 
+            </h2>
+            <h2>Our Team will connect with you shortly.</h2>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
