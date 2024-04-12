@@ -1,1 +1,1 @@
-web: gunicorn 'pandit_website.wsgi'
+web: gunicorn 'pandit_website.wsgi' --log-file -
