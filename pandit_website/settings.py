@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-u-snkl%e7ov*jqnyzc5qb7yj3ykudlcl9xds_1g-9$$3-!^2#+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['www.panditprabhakar.com']
 
 
 # Application definition
@@ -154,3 +154,9 @@ LOGOUT_REDIRECT_URL = "home"
 
 EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+
+
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
