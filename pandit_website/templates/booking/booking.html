@@ -2,7 +2,6 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Booking{% endblock %}
-
 {% block content %}
 <section id="contact" class="contact">
 <div class="container" >
@@ -15,13 +14,20 @@
     <div class="row">
         <div class="col px-5 mb-5">
             <form action="" method="post" role="form" class="php-email-form">
-                <h2 class="inq"><b>Booking Form</b></h2>
+                {% csrf_token %}
+                <h2 class="inq"><b>Please Fill The Booking Form</b></h2>
+                <h2 class="text-center" ><b>For {{festival_puja_d.title}}</b></h2>
+
+                <h3></h3>
+                <br>
                 {% if messages %}
                 {% for msg in messages %}
                 <p>{{msg}}</p>
                 {% endfor %}
                 {% endif %}
-                {% csrf_token %}
+
+
+             
         
                 <div class="row">
                     <div class="col form-group">
@@ -35,18 +41,23 @@
                 </div>
 
                 <div class="row">
-                    <divv class="col pt-4">
+                    <div class="col pt-4">
                         <div class="form-group">
                             <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone Number"
                                 required>
                         </div>
                 
-                        <div class="form-group pt-4">
-                            <input type="text" class="form-control" name="category" id="category" placeholder="Category"
+                        <div class="col form-group"> 
+                            <label style="padding: 10px 0px;"><b>Event Category</b></label><input type="text" name="category" value="{{festival_puja_d.category}}" class="form-control" id="category"
+                            required>
+                        </div>
+
+                        <div class="col form-group">
+                            <label style="padding: 10px 0px;"><b>Event Name</b></label> <input type="text" class="form-control" name="pujaname"  value="{{festival_puja_d.title}}" id="pujaname" 
                                 required>
                         </div>
                 
-                    </divv>
+                    </div>
                 </div>
             
             
@@ -54,7 +65,7 @@
             <div class="col pt-4">
 
                 <div class="form-group">
-                    <label class="f20"><b>Puja Date -</b></label>
+                    <label style="padding: 10px 0px;" ><b>Puja Date</b></label>
                     <input type="date" name="puja_date" id="puja_date">
                   </div>
             </div>
@@ -65,15 +76,11 @@
         
         
                 <div class="form-group pt-4">
-                    <textarea class="form-control" name="user_adress" rows="5" placeholder="Message"
-                        required></textarea>
+                    <textarea class="form-control" name="user_address" id="user_address" rows="5" placeholder="Message"
+                        ></textarea>
                 </div>
-        
+
                 
-                <div class="form-group pt-4">
-                    <textarea class="form-control" name="details" rows="5" placeholder="Details"
-                        required></textarea>
-                </div>
         
            
                 <div class="text-center pt-4 pb-4"><button type="submit" value="Submit"  class="btn-orange">Book Pandit</button></div>

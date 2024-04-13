@@ -33,7 +33,7 @@ urlpatterns = [
     path('destination_wedding/', views.destination_wedding, name='havan' ),
     path('nri_service/', views.nri_service, name='nri_service' ),
     path('termandservice/', views.termandservice, name='termandservice' ),
-    path('book_now/', bookingform.my_form_view, name='book_now'),
+    path('book_now/<int:id>', bookingform.my_form_view, name='book_now'),
     path('book_now/booking_success/<int:id>', bookingform.succsess, name='succsess'),
     
    
