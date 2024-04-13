@@ -26,9 +26,11 @@ SECRET_KEY = 'django-insecure-u-snkl%e7ov*jqnyzc5qb7yj3ykudlcl9xds_1g-9$$3-!^2#+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.panditprabhakar.com','http://127.0.0.1:8000/']
+ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['www.panditprabhakar.com']
+CSRF_TRUSTED_ORIGINS = ["https://www.panditprabhakar.com"]
+CSRF_ALLOWED_ORIGINS = ["https://www.panditprabhakar.com"]
+CORS_ORIGINS_WHITELIST = ["https://www.panditprabhakar.com"]
 
 # Application definition
 
@@ -39,12 +41,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise.runserver_nostatic',    
+    'whitenoise.runserver_nostatic',
+    'django.contrib.sites',  # new
+    'django.contrib.sitemaps',  # new     
     'accounts',
     'contacts',
     'services',
     'booking'
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

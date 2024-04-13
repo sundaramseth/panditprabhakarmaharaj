@@ -8,6 +8,12 @@ from services import views as home
 from django.conf import settings  # new
 from django.conf.urls.static import static  # new
 from booking import views as bookingform
+from django.contrib.sitemaps.views import sitemap  # new
+from services.models import Typesofpuja
+
+from pandit_website.sitemaps import TypesofpujaSitemap
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,6 +41,11 @@ urlpatterns = [
     path('termandservice/', views.termandservice, name='termandservice' ),
     path('book_now/<int:id>', bookingform.my_form_view, name='book_now'),
     path('book_now/booking_success/<int:id>', bookingform.succsess, name='succsess'),
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": {"home": TypesofpujaSitemap}},
+    ),
     
    
 ]

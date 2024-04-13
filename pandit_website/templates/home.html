@@ -181,7 +181,7 @@
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch" style="margin-bottom: 20px; " data-aos="zoom-in" data-aos-delay="100">
  
         <div class="icon-box">
-          <div class="imageservice"><img class="service_icon" src="/media/{{ x.puja_img }}"  > </div>
+          <div class="imageservice"><a href="{{ x.get_absolute_url }}"><img class="service_icon" src="/media/{{ x.puja_img }}"  > </a></div>
           <h4 class="mt-4"> <a href="home/details/{{ x.id }}" >{{ x.title }}</a></h4>
           <p >{{ x.description|slice:":255"  }}</p>
         </div>
