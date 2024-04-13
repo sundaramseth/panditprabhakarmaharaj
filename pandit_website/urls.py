@@ -20,7 +20,7 @@ urlpatterns = [
     path("accounts/", include("accounts.urls")),  # new
     path('accounts/', include('django.contrib.auth.urls')),
     path("", home.home, name="home"),
-    path('home/details/<int:id>', mainservices.details, name='details'),
+    path('home/details/<int:id>', mainservices.details, name='detailshome'),
     path('about/', views.about, name='about'),
     path('all_service/', mainservices.mainservices, name='all_services'),
     path('festive/', mainservices.festive_service, name='festival_puja' ),
@@ -44,7 +44,7 @@ urlpatterns = [
     path(
         "sitemap.xml",
         sitemap,
-        {"sitemaps": {"home": TypesofpujaSitemap}},
+        {"sitemaps": {"home/details/<int:id>": TypesofpujaSitemap}},
     ),
     
    
