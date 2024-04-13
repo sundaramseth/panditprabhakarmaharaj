@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['www.panditprabhakar.com','http://127.0.0.1:8000/']
 
+CSRF_TRUSTED_ORIGINS = ['www.panditprabhakar.com']
 
 # Application definition
 
