@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.template import loader
+from django.views.generic import TemplateView
 
 
 def about(request):
@@ -45,3 +46,5 @@ def termandservice(request):
   return HttpResponse(template.render(context, request));
 
 
+class RobotsTxtView(TemplateView):
+    template_name = "robots.txt"

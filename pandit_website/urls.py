@@ -12,6 +12,7 @@ from django.contrib.sitemaps.views import sitemap  # new
 from services.models import Typesofpuja
 
 from pandit_website.sitemaps import TypesofpujaSitemap
+from .views import RobotsTxtView
 
 
 
@@ -32,7 +33,7 @@ urlpatterns = [
     path('shanti_puja/', mainservices.santi_service, name='shanti_puja' ),
     path('shanti_puja/details/<int:id>', mainservices.details, name='details'),
     path('sanskar_vidhi/', mainservices.sanskar_service, name='sanshkar_vidhi' ),
-    path('sthapan_service/details/<int:id>', mainservices.details, name='details'),
+    path('sanskar_vidhi/details/<int:id>', mainservices.details, name='details'),
     path('sthapan_puja/', mainservices.sthapan_service, name='sthapan_service' ),
     path('sthapan_puja/details/<int:id>', mainservices.details, name='details'),
     path('contact/',contact_view.contact_view,name='contact'),
@@ -41,6 +42,7 @@ urlpatterns = [
     path('termandservice/', views.termandservice, name='termandservice' ),
     path('book_now/<int:id>', bookingform.my_form_view, name='book_now'),
     path('book_now/booking_success/<int:id>', bookingform.succsess, name='succsess'),
+    path("robots.txt", RobotsTxtView.as_view(content_type="text/plain"), name="robots"),
     path(
         "sitemap.xml",
         sitemap,
