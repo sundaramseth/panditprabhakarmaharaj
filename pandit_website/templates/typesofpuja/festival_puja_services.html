@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Home{% endblock %}
+{% block title %}Book Pandit Online For | Festival Puja Service{% endblock %}
 
 {% block content %}
 
@@ -40,7 +40,7 @@
             <div class="card mb-3" style="max-width: 100% !important; width: 100% !important;">
               <div class="row g-0">
                 <div class="col-5">
-                  <img src="/media/{{ x.puja_img }}"  class="img-fluid" alt="..." style="height: 100% !important;">
+                  <img src="/media/{{ x.puja_img }}"  class="img-fluid" alt="{{x.title}}" style="height: 100% !important;">
                 </div>
                 <div class="col-7">
                   <div class="card-body">

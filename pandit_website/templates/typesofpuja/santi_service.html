@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Home{% endblock %}
+{% block title %}Book Pandit Online For | Shanti Pooja Services{% endblock %}
 
 {% block content %}
 
@@ -40,7 +40,7 @@
             <div class="card mb-3" style="max-width: 100% !important; width: 100% !important;">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="/media/{{ x.puja_img }}"  class="img-fluid" alt="..." style="height: 100% !important;">
+                  <img src="/media/{{ x.puja_img }}"  class="img-fluid" alt="{{x.title}}" style="height: 100% !important;">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">

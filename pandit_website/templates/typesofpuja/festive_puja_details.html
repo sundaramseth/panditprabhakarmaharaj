@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Home{% endblock %}
+{% block title %}Details About Events Of Puja{% endblock %}
 
 {% block content %}
 
@@ -18,7 +18,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-center">
-          <img src="/media/{{ festival_puja_d.puja_img }}"   style="height: 100% !important; width: 100%; border-radius: 24px;">
+          <img src="/media/{{ festival_puja_d.puja_img }}"  alt="{{x.title}}" style="height: 100% !important; width: 100%; border-radius: 24px;">
         </div>
       </div>
       <div class="row pt-4">
