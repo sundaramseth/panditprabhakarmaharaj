@@ -10,7 +10,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-    font-family: "Open Sans", sans-serif;
+  font-family: system-ui !important;
     color: #444444;
   }
   
@@ -51,10 +51,14 @@ body {
   h3,
   h4,
   h5,
-  h6 {
-    font-family: "Roboto", sans-serif;
+  h6,p {
+    font-family: system-ui !important;
   }
   
+
+  .fontcat{
+    font-size: 18px;
+  }
   /*--------------------------------------------------------------
   # Preloader
   --------------------------------------------------------------*/
@@ -917,6 +921,7 @@ display: none !important;
   --------------------------------------------------------------*/
   .counts {
     padding: 10vh 0 10vh;
+    font-style: normal;
   }
   
   .success{
@@ -1005,7 +1010,15 @@ display: none !important;
 
     .p30{
       padding: 30px 35px !important;
+      font-size: 16px !important;
     }
+  }
+
+  .p30{
+    font-size: 18px;
+    font-family: system-ui;
+    padding-right: 60px;
+
   }
 
   .w-100{
@@ -1161,7 +1174,7 @@ display: none !important;
   }
   
   .team .member .member-info p {
-    font-style: italic;
+    font-style: normal;
     font-size: 14px;
     line-height: 26px;
     color: #777777;
@@ -1385,6 +1398,7 @@ display: none !important;
     color: #444444;
     font-size: 14px;
     background: #f1f6fe;
+    font-style: normal;
   }
   
   #footer .footer-newsletter {
@@ -1610,6 +1624,7 @@ display: none !important;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
     background: #fff;
+    font-style: normal;
   }
 
 @keyframes  pulse-animation{

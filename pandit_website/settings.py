@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'accounts',
     'contacts',
     'services',
-    'booking'
+    'booking',
+    'ckeditor'
 ]
 
 SITE_ID = 2

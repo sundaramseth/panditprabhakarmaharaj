@@ -1,11 +1,12 @@
 from django.db import models
 from django.urls import reverse
+from ckeditor.fields import RichTextField 
 # Create your models here.
 class Typesofpuja(models.Model):
     puja_img = models.ImageField( null=True) 
     title = models.CharField(max_length=200, null=True)
     category = models.CharField(max_length=200, null=True)
-    description = models.TextField(max_length=10000, null=True)
+    description =  RichTextField()
     price = models.CharField(max_length=191, null=True)
     updated_at = models.DateTimeField(auto_now=True)
 
