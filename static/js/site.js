@@ -42,3 +42,54 @@ function addAnimation() {
       content.classList.remove("reanimate");
     }, 500); // 500 is the same time as the CSS animation
   }
+
+
+      // Function to animate the count
+  function animateCount(target, duration, counter) {
+        const start = 0;
+        const range = target - start;
+        const increment = target / (duration / 16); // Adjust for 60fps
+  
+        let current = start;
+        const step = () => {
+          current += increment;
+          if (current >= target) {
+            counter.textContent = target.toLocaleString();
+          } else {
+            counter.textContent = Math.floor(current).toLocaleString();
+            requestAnimationFrame(step);
+          }
+        };
+        step();
+      }
+  
+const satisfy =  document.getElementById("counter");
+
+const typeofpuja =  document.getElementById("typeofpuja");
+
+const hours =  document.getElementById("hours");
+
+const poojaperformed =  document.getElementById("poojaperformed");
+
+      // Start the count animation to 5000 over 3 seconds
+
+  const targetSection = document.getElementById('counts');
+
+  if(targetSection){
+    window.addEventListener('scroll', () => {
+      const sectionTop = targetSection.getBoundingClientRect().top;
+    
+      if (sectionTop < window.innerHeight && sectionTop >= 0) {
+        // Code to run when the section is visible
+        animateCount(1500,1000,satisfy);
+        animateCount(20,1000,typeofpuja);
+        animateCount(24,1000,hours);
+        animateCount(2000,1000,poojaperformed);
+      }
+    });
+  }
+
+
+
+
+
